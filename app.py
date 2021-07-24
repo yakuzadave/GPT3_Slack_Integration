@@ -57,7 +57,6 @@ def gpt_req(req):
         lines = "".join(lines)
     res = gpt3(f"{lines}\nQ: {req}")
     answer = res['response_text']
-    #print(answer)
     return answer
 
 
@@ -76,8 +75,11 @@ def handle_app_mention_events(body, logger, client,say):
     print(body)
     event = body['event']
     event_text = event['text']
-    mention = "<@U029DFYBQN5>"
+    
+    # Enter your bot id here to slice it from the text.
+    mention = "<@U000000000000>"
     if (event_text.find(mention) != -1):
+        # So basic while the bot is 
         say("Sure, I can try to come up with something for you.")
         question = event_text[15:]
         print(question)
