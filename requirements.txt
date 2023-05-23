@@ -1,5 +1,5 @@
 slack-bolt==1.7.0
-requests==2.25.1
+requests==2.31.0
 requests-oauthlib==1.3.0
 slack-sdk==3.8.0
 Flask==0.12.2
